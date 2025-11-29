@@ -103,8 +103,8 @@ body {
 @layer components {
   .HeroButton {
     @apply px-0.5 py-2  border-cyan-950 rounded-full uppercase text-xs tracking-widest text-cyan-900
-    text-[10px] sm:text-[1px] md:text-base  sm:px-0.5 py-0.5 
-    transition-all hover:border border-b-cyan-950 text-cyan-900;
+    text-[10px] sm:text-[1px] md:text-base  sm:px-0.5
+    transition-all hover:border border-b-cyan-950 ;
   }
 }
 /* Smooth scrolling for entire site */
@@ -133,3 +133,7 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #00cccc; /* slightly dimmed cyan */
 }
+html, body {
+    scroll-behavior: smooth;
+}
+

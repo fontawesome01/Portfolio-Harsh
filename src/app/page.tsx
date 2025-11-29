@@ -1,9 +1,9 @@
 import Header from './components/Header';
-import Hero from './components/Hero';
+import Hero from './components/herosection/Hero';
 import About from './components/About';
 import Skills from './components/skills';
-import Projects from './components/Projects';
-import Achievements from './components/Achievements';
+import Projects from './components/project/Projects';
+import Achievements from '@/app/components/achievements and certificates/Achievements';
 import Contact from './components/contact';
 export default function Home() {
   return (

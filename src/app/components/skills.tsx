@@ -16,70 +16,58 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 import Masonry from 'react-masonry-css';
-
-const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const check = () =>
-      setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener('resize', check);
-    return () =>
-      window.removeEventListener('resize', check);
-  }, []);
-  return isMobile;
-};
+import useIsMobile from '@/app/components/useIsMobile';
 
 const skills = [
   {
-    icon: <SiReact size={40} color="#61DBFB" />,
+    icon: <SiReact size={50} color="#61DBFB" />,
     name: 'React',
     level: 'Advanced',
     usage: 'Portfolio, Projects',
   },
   {
-    icon: <SiNextdotjs size={40} color="#fff" />,
+    icon: <SiNextdotjs size={50} color="#fff" />,
     name: 'Next.js',
     level: 'Intermediate',
     usage: 'Portfolio Frontend',
   },
   {
     icon: (
-      <SiTailwindcss size={40} color="#38BDF8" />
+      <SiTailwindcss size={50} color="#38BDF8" />
     ),
     name: 'Tailwind CSS',
     level: 'Advanced',
     usage: 'Styling in all projects',
   },
   {
-    icon: <SiPython size={40} color="#3776AB" />,
+    icon: <SiPython size={50} color="#3776AB" />,
     name: 'Python',
     level: 'Intermediate',
     usage: 'ML, NIDS Project',
   },
   {
     icon: (
-      <SiCplusplus size={40} color="#00599C" />
+      <SiCplusplus size={50} color="#00599C" />
     ),
     name: 'C++',
     level: 'Advanced',
     usage: 'DSA, Competitive Programming',
   },
   {
-    icon: <SiHtml5 size={40} color="#E34F26" />,
+    icon: <SiHtml5 size={50} color="#E34F26" />,
     name: 'HTML5',
     level: 'Advanced',
     usage: 'Frontend Design',
   },
   {
-    icon: <SiCss3 size={40} color="#1572B6" />,
+    icon: <SiCss3 size={50} color="#1572B6" />,
     name: 'CSS3',
     level: 'Advanced',
     usage: 'Styling and Animations',
   },
   {
     icon: (
-      <SiJavascript size={40} color="#F7DF1E" />
+      <SiJavascript size={50} color="#F7DF1E" />
     ),
     name: 'JavaScript',
     level: 'Intermediate',
@@ -87,7 +75,7 @@ const skills = [
   },
   {
     icon: (
-      <SiTypescript size={40} color="#3178C6" />
+      <SiTypescript size={50} color="#3178C6" />
     ),
     name: 'TypeScript',
     level: 'Beginner',
@@ -119,17 +107,13 @@ export default function Skills() {
     <section
       id="skills"
       key={isMobile ? 'mobile' : 'desktop'}
-      className="min-h-screen flex flex-col items-center justify-center px-6 py-16 relative overflow-visible"
+      className="min-h-screen bg-black flex flex-col items-center justify-center px-6 py-16 relative overflow-visible"
     >
       <motion.h3
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        // style={{
-        //   textShadow:
-        //     '0 0 40px #00FFFF, 0 0 40px #00FFFF, 0 0 40px #00FFFF',
-        // }}
         className="absolute top-24 uppercase tracking-[20px] text-cyan-800"
       >
         My Skills
@@ -159,8 +143,8 @@ export default function Skills() {
                 onMouseLeave={() =>
                   setSelectedSkill(null)
                 }
-                className="p-4 bg-gray-800 rounded-full 
-                cursor-pointer hover:shadow-[0_0_15px_#00ffff99] 
+                className="p-4 bg-black rounded-2xl
+                cursor-pointer hover:shadow-[0_0_15px_#00ffff99]
                 transition-all duration-300"
               >
                 {skill.icon}
@@ -223,7 +207,7 @@ export default function Skills() {
                   onClick={() =>
                     setSelectedSkill(skill)
                   }
-                  className="p-4 bg-gray-800 rounded-full shadow-[0_0_10px_#00ffff55] cursor-pointer hover:scale-110 transition-all"
+                  className="p-4 bg-black rounded-2xl cursor-pointer hover:scale-110 transition-all"
                 >
                   {skill.icon}
                 </div>
@@ -239,6 +223,15 @@ export default function Skills() {
               transition={{ duration: 0.3 }}
               className="absolute right-6 top-1/2 -translate-y-1/2 w-56 bg-black/80 border border-cyan-500/40 text-gray-200 p-4 rounded-xl shadow-[0_0_20px_#00ffff55] z-10"
             >
+              <button
+                onClick={() =>
+                  setSelectedSkill(null)
+                }
+                className=" text-gray-300
+                 hover:text-cyan-400 text-xl"
+              >
+                ✕
+              </button>
               <h4 className="text-cyan-400 text-xl font-semibold mb-2">
                 {selectedSkill.name}
               </h4>

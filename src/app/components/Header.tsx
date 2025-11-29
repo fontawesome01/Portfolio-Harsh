@@ -2,12 +2,26 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
-
+const Icons = [
+  {
+    name: 'github',
+    href: 'https://github.com/fontawesome01',
+  },
+  {
+    name: 'x',
+    href: 'https://www.x.com/',
+  },
+  {
+    name: 'whatsapp',
+    href: 'https://wa.me/918979724212?text=Hi%20Harsh,%20I%20saw%20your%20portfolio!',
+  },
+];
 function Header() {
   return (
     <header
       className="sticky top-0 p-5 flex items-center
      justify-between max-w-7xl mx-auto z-20 xl:items-center
+     bg-black
      "
     >
       <motion.div
@@ -21,64 +35,27 @@ function Header() {
         }}
         className="flex space-x-4"
       >
-        {/* GitHub Icon */}
-        <motion.div
-          whileHover={{
-            scale: 1.3,
-            rotate: 360, // shake effect
-          }}
-          transition={{
-            duration: 0.5, // how long the shake lasts
-            ease: 'easeInOut',
-          }}
-        >
-          <SocialIcon
-            network="github"
-            url="https://github.com/"
-            fgColor="#fff"
-            bgColor="transparent"
-            style={{ height: 50, width: 50 }}
-          />
-        </motion.div>
-        {/* YouTube Icon */}
-        <motion.div
-          whileHover={{
-            scale: 1.3,
-            rotate: 360, // shake effect
-          }}
-          transition={{
-            duration: 0.5, // how long the shake lasts
-            ease: 'easeInOut',
-          }}
-        >
-          <SocialIcon
-            network="x"
-            url="https://github.com/"
-            fgColor="#fff"
-            bgColor="transparent"
-            style={{ height: 50, width: 50 }}
-          />
-        </motion.div>
-
-        <motion.div
-          whileHover={{
-            scale: 1.3,
-            rotate: 360, // shake effect
-          }}
-          transition={{
-            duration: 0.5, // how long the shake lasts
-            ease: 'easeInOut',
-          }}
-        >
-          <SocialIcon
-            network="whatsapp"
-            url="https://wa.me/918979724212?text=Hi%20Harsh,%20I%20saw%20your%20portfolio!
-"
-            fgColor="#fff"
-            bgColor="transparent"
-            style={{ height: 50, width: 50 }}
-          />
-        </motion.div>
+        {Icons.map((icon) => (
+          <motion.div
+            key={icon.name}
+            whileHover={{
+              scale: 1.3,
+              rotate: 360, // shake effect
+            }}
+            transition={{
+              duration: 0.5, // how long the shake lasts
+              ease: 'easeInOut',
+            }}
+          >
+            <SocialIcon
+              network={icon.name}
+              url={icon.href}
+              fgColor="#fff"
+              bgColor="transparent"
+              style={{ height: 50, width: 50 }}
+            />
+          </motion.div>
+        ))}
       </motion.div>
 
       <motion.div
@@ -86,17 +63,15 @@ function Header() {
         animate={{ x: 0, opacity: 1 }}
         transition={{
           type: 'spring',
-          stiffness: 80, // entrance stiffness
-          damping: 15, // entrance damping
+          stiffness: 80,
+          damping: 15,
           delay: 0.2,
         }}
-        // 👇 Hover animation
         whileHover={{
-          // rotate: 360, // rotate slightly
-          scale: 1.3, // small scale up
+          scale: 1.3,
           transition: {
             type: 'spring',
-            stiffness: 300, // different stiffness for hover
+            stiffness: 300,
             damping: 10,
           },
         }}
