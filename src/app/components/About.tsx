@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 function About() {
   return (
     <section
-      className="flex flex-col relative h-screen text-center md:text-left 
-                 md:flex-row max-w-7xl mx-auto px-8 justify-evenly items-center"
+      className="flex flex-col relative h-screen bg-black text-center md:text-left
+                 md:flex-row  mx-auto justify-evenly items-center"
     >
       <motion.h3
         initial={{ opacity: 0, y: -30 }}

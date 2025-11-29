@@ -3,21 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa';
-import { useState, useEffect } from 'react';
 
-const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const check = () =>
-      setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener('resize', check);
-    return () =>
-      window.removeEventListener('resize', check);
-  }, []);
-  return isMobile;
-};
-
+import useIsMobile from '@/app/components/useIsMobile';
 type ProjectProps = {
   title: string;
   description: string;
@@ -89,7 +76,6 @@ const ProjectCard = ({
           ))}
         </div>
 
-        {/* 🔗 GitHub Link */}
         <div className="mt-4">
           <a
             href={github}

@@ -50,8 +50,10 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="h-screen flex relative overflow-hidden flex-col text-left
-    md:flex-row max-w-full px-10 justify-evenly mx auto items-center"
+      className="min-h-screen flex relative
+      overflow-hidden flex-col text-left
+    md:flex-row max-w-full px-10 justify-evenly
+    mx auto items-center bg-black"
     >
       <motion.h3
         initial={{ opacity: 0, y: -30 }}
@@ -59,13 +61,13 @@ const ProjectsSection = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
         className="absolute top-24 uppercase 
-              tracking-[20px] text-cyan-800"
+              tracking-[20px] text-cyan-800 "
       >
         projects
       </motion.h3>
 
       <div
-        className="w-full flex space-x-5 
+        className="w-full flex space-x-5 mt-20
       overflow-x-scroll p-10 snap-x snap-mandatory"
       >
         {projects.map((p, i) => (

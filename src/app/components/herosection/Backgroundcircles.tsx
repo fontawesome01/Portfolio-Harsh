@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Backgroundcircles() {
   return (
-    <div className="absolute inset-0 flex items-center justify-center -z-20 pointer-events-none">
+    <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
       {/* Large glowing rings */}
       <div
         className="rounded-full border border-[#00FFFF]/30 absolute animate-pulse opacity-100"
