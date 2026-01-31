@@ -1,47 +1,76 @@
 # 🌐 Harsh Rajput — Personal Portfolio
 
-Welcome to my personal portfolio website built using **Next.js**, **TypeScript**, and **Tailwind CSS**.  
-This website showcases my skills, projects, and journey as a developer.
+A modern, responsive personal portfolio built with **Next.js**, **TypeScript**, and **Tailwind CSS**.  
+This project showcases my skills, projects, and growth as a developer.
 
-It’s not just a portfolio — it’s also my **Git & GitHub learning project**, where I’ll continuously add features, update sections, and track my growth using real commits and branches.
+Beyond being a portfolio, this repository also serves as my **Git & GitHub learning playground**, where I continuously improve the codebase through real commits, branches, and feature updates.
 
-Live: https://portfolio-harsh.vercel.app  *(update after deploy)*
----
-
-## 🚀 Features
-
-- 💻 **Responsive Design** for all screen sizes
-- ⚡ **Fast and Optimized** with Next.js
-- ✉️ **Contact Section** with direct mail link
-- 🎨 **Smooth Animations** using Framer Motion
+🔗 **Live Website:**  
+https://portfolio-harsh.vercel.app *(update after deployment)*
 
 ---
 
-## 🧰 Tech Stack
+## ✨ Highlights
 
-| Category | Tools Used |
-|-----------|-------------|
-| **Frontend Framework** | [Next.js](https://nextjs.org/) |
-| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
+- 💻 Fully **responsive UI** across all devices  
+- ⚡ High performance using **Next.js optimization**  
+- ✉️ Contact section with direct email integration  
+- 🎨 Smooth animations powered by **Framer Motion**  
+- 🧩 Clean, scalable component-based architecture  
+
+---
+
+## 🛠 Tech Stack
+
+| Category | Technology |
+|--------|------------|
+| **Framework** | Next.js |
 | **Language** | TypeScript |
+| **Styling** | Tailwind CSS |
 | **Animations** | Framer Motion |
-| **Deployment** | [Vercel](https://vercel.com/) |
+| **Deployment** | Vercel |
 
 ---
 
-## 🧑‍💻 Getting Started
+## 📂 Project Purpose
 
-To run this project locally:
+This portfolio is designed to:
+- Present my work and skills professionally  
+- Practice real-world **Git & GitHub workflows**  
+- Experiment with UI/UX improvements  
+- Serve as a foundation for future enhancements  
+
+---
+
+## 🚀 Getting Started (Local Development)
+
+Follow these steps to run the project locally:
 
 ```bash
 # Clone the repository
 git clone https://github.com/<your-username>/portfolio-harsh.git
 
-# Navigate into the project folder
+# Navigate into the project directory
 cd portfolio-harsh
 
 # Install dependencies
 npm install
 
-# Run the development server
+# Start the development server
 npm run dev
+```
+## 📌 Future Improvements
+
+- Add blog / writing section  
+- Integrate backend-powered contact form  
+- Improve SEO & performance metrics  
+- Add project case studies  
+
+---
+
+## 👨‍💻 Author
+
+**Harsh Rajput**  
+Frontend / Full-Stack Developer  
+
+- GitHub: https://github.com/fontawesome01
