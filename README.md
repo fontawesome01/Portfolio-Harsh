@@ -6,7 +6,7 @@ This project showcases my skills, projects, and growth as a developer.
 Beyond being a portfolio, this repository also serves as my **Git & GitHub learning playground**, where I continuously improve the codebase through real commits, branches, and feature updates.
 
 🔗 **Live Website:**  
-https://portfolio-harsh.vercel.app *(update after deployment)*
+https://portfolio-harsh-woad.vercel.app/
 
 ---
 
